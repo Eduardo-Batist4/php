@@ -18,11 +18,15 @@ define('time', 'Flamengo'); // echo time -> Flamengo
 // isInt() => verifica se é inteiro
 // is_float() => verifica se é um float
 // is_boolen() => verifica se é um boolean
+// is_null() => verifica se uma variavel tem valor ou não
 
 // Concatenação
 $concat = "Fallen " . "goat\n";
 
+// ------------------------------------- //
 // Array
+// ------------------------------------- //
+
 $array = ['um', 'dois', 'tres'];
 
 $array[] = 'quatro'; // Adiciona um elemento no array
