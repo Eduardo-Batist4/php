@@ -82,5 +82,59 @@ echo "Valor com Desconto de 10%: R$:" .  number_format($discountedPrice) . "\n";
 */
 
 // ---------------------- //
-// Exercicio D
+// Exercicio E
 // ---------------------- //
+
+/*
+$base = readline("Base: \n");
+$height = readline("Altura: \n");
+
+$perimeter = 2 * ($base + $height);
+$area = $base * $height;
+$diagonal = number_format(sqrt(($base ** 2) + ($height ** 2)), 2);
+
+echo "Perímetro: $perimeter \n";
+echo "Area: $area \n";
+echo "Diagonal: $diagonal \n";
+*/
+
+// ---------------------- //
+// Exercicio F
+// ---------------------- //
+
+/*
+$base = readline("Base: \n");
+$height = readline("Altura: \n");
+
+$result = ($base * $height) / 2;
+
+echo "Area do triangulo: $result \n";
+*/
+
+// ---------------------- //
+// Exercicio G
+// ---------------------- //
+
+/*
+$longestDiagonal = readline("Diagonal maior: \n");
+$smallerDiagonal = readline("Diagonal menor: \n");
+
+$result = ($longestDiagonal * $smallerDiagonal) / 2;
+
+echo "Area do losango: $result \n";
+*/
+
+// ---------------------- //
+// Exercicio I
+// ---------------------- //
+
+/* 
+$fixedSalary = readline("Salario fixo: \n");
+$numberOfCars = readline("Numeros de carros vendidos: \n");
+$commissionValue = readline("Valor da comissao: \n");
+$totalSalesValue = readline("Valor total de vendas: \n");
+
+$finalSalary = $fixedSalary + ($numberOfCars * $commissionValue) + (0.05 * $totalSalesValue);
+
+echo "Salario final: $finalSalary";
+*/

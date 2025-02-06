@@ -1,4 +1,0 @@
-Escopo
-- Local: variavel declarada em uma função
-- GLobal: variavel declarada fora da função
-- Static: variavel declarada dentro da função, porem o seu valor permanece salvo entre chamadas da função
