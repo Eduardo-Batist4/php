@@ -1,24 +1,30 @@
 <?php
 
+// ------------------------------------- //
 // Saida
-// echo = precisa percorrer a array e não consegue imprimir array diretamente;
-// print = imprime um por vez e sempre retorna 1;
+// ------------------------------------- //
+echo "Saida com echo\n"; // echo = precisa percorrer a array e não consegue imprimir array diretamente; 
+print "Saida com print\n"; // print = imprime um por vez e sempre retorna 1;
 
+// ------------------------------------- //
+// Verificaçao de tipos de variaveis
+// ------------------------------------- //
 
-// echo "Saida com echo\n"; 
-// print "Saida com print\n";
+// is_string() => verifica se é uma string
+// isInt() => verifica se é inteiro
+// is_float() => verifica se é um float
+// is_boolen() => verifica se é um boolean
+// is_null() // => verifica se uma variavel tem valor ou não
+
+// ------------------------------------- //
+// Variavel e Constante
+// ------------------------------------- //
 
 // Variavel
 $variavelString = "É uma variavel";
 
 // Constante
 define('time', 'Flamengo'); // echo time -> Flamengo
-
-// is_string() => verifica se é uma string
-// isInt() => verifica se é inteiro
-// is_float() => verifica se é um float
-// is_boolen() => verifica se é um boolean
-// is_null() => verifica se uma variavel tem valor ou não
 
 // Concatenação
 $concat = "Fallen " . "goat\n";
@@ -38,9 +44,12 @@ $arrayA1['quatro'] = 4;
 
 $arrayA2 = ['um' => 1, 'dois' => 2, 'tres' => 3]; // echo $array2['dois'];
 
-// if ternario
-// print(false ? 'não fico impresso' : 'fico')
+// ------------------------------------- //
+// Condiçoes
+// ------------------------------------- //
 
+// if ternario
+print(false ? 'não fico impresso' : 'fico');
 
 // ------------------------------------- //
 // Objetos
@@ -67,5 +76,6 @@ function minha_função () {
 $anonima = function ($x) {
     return $x + 1;
 }; // echo $anonima(2) // => 3
+
 // ------------------------------------- //
 
