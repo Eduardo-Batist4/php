@@ -3,7 +3,8 @@
 // ---------------------- //
 // Exercicio A
 // ---------------------- //
-/* 
+
+/*
 echo 'First number: ';
 $input_1 = readline();
 echo "\n";
@@ -13,8 +14,9 @@ $input_2 = readline();
 echo "\n";
 
 $result = $input_1 / $input_2;
+$reminderDivision = $input_1 % $input_2;
 
-echo "Resultado: $result";
+echo "Resultado: $result Resto da divisão: $reminderDivision \n";
 */
 
 // ---------------------- //
