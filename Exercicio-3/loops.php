@@ -75,8 +75,9 @@ echo "Média: $media \n";
 // Exercicio 5
 // --------------------- //
 
-$smaller = 0;
-$larger = 0;
+/*
+$smaller = PHP_INT_MAX;
+$larger = PHP_INT_MIN;
 
 while(true) {
     $number = readline("Digite um numero: \n");
@@ -84,18 +85,96 @@ while(true) {
     if($number != 0) {
         if($number > $larger) {
             $larger = $number;
-        } else if ($smaller  && $number != 0) {
+        }
+        if($number < $smaller) {
             $smaller = $number;
         }
     } else {
         echo "Menor numero: $smaller \n";
-        echo "Maior numero: $larger \n";
-        exit;
-    }
+    echo "Maior numero: $larger \n";
+    exit;
+}
+};
+*/
+
+// --------------------- //
+// OPCIONAL 6
+// --------------------- //
+
+/* 
+while(true) {
+
+    $firstGrade = readline("Primeira nota: \n");
+    $secondGrade = readline("Segunda nota: \n");
+
+    if($firstGrade >= 0 && $firstGrade <= 10 && $secondGrade >= 0 && $secondGrade <= 10) {
+        $calculateAverage = ($firstGrade + $secondGrade) / 2;
+
+        echo "Média: $calculateAverage \n";
+
+        $newCalculate = readline("Novo cálculo? (S/N) \n");
+
+        if($newCalculate == 's' || $newCalculate == 'S') {
+            system('clear');
+            continue;
+        } else {
+            system('clear');
+            exit;
+        };
+
+    } else {
+        echo "Nota inválida! (0 a 10). \n";
+    };
+};
+*/
+
+// --------------------- //
+// OPCIONAL 7
+// --------------------- //
+
+/* 
+$quantityOfNegativeNumbers = 0;
+
+for ($i = 0; $i < 10; $i++) {
+    $number = readline("Digite um numero: \n");
+    if($number < 0) {
+        $quantityOfNegativeNumbers++;
+    };
 };
 
+echo "Quantidade de numeros negativos: $quantityOfNegativeNumbers \n";
+*/
 
+// --------------------- //
+// OPCIONAL 8
+// --------------------- //
 
+/* 
+$totalValue = 0;
+$totalMerchandise = 0;
 
+while (true) {
 
+    echo "Cadastrar (1) \n";
+    echo "Resultado (2) \n";
+    $menuOption = readline("Escolha uma opção do menu: \n");
+    system('clear');
 
+    if($menuOption != 2) {
+        $valueProduct = readline("Valor da mercadoria:  \n");
+        $totalMerchandise++;
+        $totalValue += $valueProduct;
+        system('clear');
+    } else {
+        if($totalMerchandise > 0) {
+            $calculateAverage = $totalValue / $totalMerchandise;
+            echo "Valor total do estoque: $totalValue \n";
+            echo "Média do valor das mercadorias: $calculateAverage \n";
+            exit;
+        } else {
+            echo "Nenhuma mercadoria cadastrada.\n";
+            exit;
+        };
+    };
+};
+*/
