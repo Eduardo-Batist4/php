@@ -165,7 +165,7 @@ $reversed = strrev($numberCDU);
 echo "$reversed \n";
 
 // ---------------------- //
-// Opcional K
+// Opcional I
 // ---------------------- //
 
 $number = readline("Digite um numero : \n");

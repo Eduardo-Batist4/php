@@ -3,7 +3,17 @@
 // --------------------- //
 // Exercicio 1
 // --------------------- //
+
 /*
+$array = [];
+
+for ($i = 5; count($array) + 1 <= 10;  $i++) {
+    $array[] = $i * 5;
+};
+
+foreach ($array as $value) {
+    echo $value . " \n";
+};
 
 // --------------------- //
 // Exercicio 2
@@ -95,7 +105,7 @@ echo "Resultado: $result \n";
 
 
 // --------------------- //
-// Exercicio 7
+// Opcional 7
 // --------------------- //
 
 $mounth = [
@@ -118,13 +128,12 @@ $monthNumber = readline("Numero do mês: \n");
 $resultMonth = $mounth[$monthNumber];
 
 echo "Numero do mês: $monthNumber, Mês: $resultMonth \n";
-*/
 
 // --------------------- //
-// Exercicio 8
+// Opcional 8
 // --------------------- //
 
-$grade = [54,60,65,77,79,82,76,91,93];
+$grade = [54,60,65,71,79,82,76,91,13];
 $gradeTotal = 0;
 $aboveAverageScore = 0;
 
@@ -133,7 +142,7 @@ for ($i = 0; $i < count($grade); $i++) {
     $gradeTotal += $grade[$i];  
 };
 
-$media = $gradeTotal / count($grade);
+$media = number_format($gradeTotal / count($grade), 2);
 
 foreach ($grade as $item) {
     if($item > $media) {
@@ -141,6 +150,98 @@ foreach ($grade as $item) {
     };
 };
 
-echo count($grade) . " \n";
 echo "Media dos Alunos: $media \n";
-echo count($grade) . " \n";
+echo "Alunos acima da media: $aboveAverageScore \n";
+
+// --------------------- //
+// Opcional 9
+// --------------------- //
+
+$namesArray = ["joão", "eduardo", "amanda", "maria"];
+
+$randomName = "mariad";
+
+if (in_array($randomName, $namesArray)) {
+    echo "ACHEI \n";
+} else {
+    echo "NÃO ACHEI \n";
+};
+
+// --------------------- //
+// Opcional 10
+// --------------------- //
+
+$peoples = [];
+$peoples[] = ["name" => "Eduardo",  "cidade" => "Curitiba", "idade" => 24, "sexo" => "Masculino"];
+$peoples[] = ["name" => "Amanda",  "cidade" => "Ponta grossa", "idade" => 25, "sexo" => "Feminino"];
+$peoples[] = ["name" => "Lucas",  "cidade" => "Prudentopolis", "idade" => 14, "sexo" => "Masculino"];
+$peoples[] = ["name" => "Joao",  "cidade" => "Guarapuava", "idade" => 18, "sexo" => "Masculino"];
+$peoples[] = ["name" => "Matheus",  "cidade" => "Maringa", "idade" => 19, "sexo" => "Masculino"];
+
+foreach ($peoples as $item) {
+    echo "Nome: " . $item["name"] . " Idade: " . $item["idade"] . "\n";
+};
+
+foreach ($peoples as $item) {
+    if($item["cidade"] == "Guarapuava") {
+        echo "--------------------------------------------\n";
+        echo "Pessoas que moram em Guarapuava: \n";
+        echo "--------------------------------------------\n";
+        echo "Nome: " . $item["name"] . "\n";        
+    };
+};
+
+echo "--------------------------------------------\n";
+echo "Pessoas maiores de idade: \n";
+echo "--------------------------------------------\n";
+
+foreach ($peoples as $item) {
+    if($item["idade"] > 18) {
+        echo "Nome: " . $item["name"] . " Idade: " . $item["idade"] . "\n";
+    };
+};
+
+echo "--------------------------------------------\n";
+echo "Quantas Mulheres: \n";
+echo "--------------------------------------------\n";
+foreach ($peoples as $item) {
+    $countWomen = 0;
+    if($item["sexo"] == "Feminino") {
+        $countWomen++;
+        echo "Numeros de Mulheres: $countWomen \n";
+    };
+};
+*/
+
+// --------------------- //
+// Opcional 11
+// --------------------- //
+
+// --------------------- //
+// Opcional 12
+// --------------------- //
+
+$array = ['23', '7', '12', '32', '83'];
+$newArray = [];
+
+function quicksort ($array) {
+    if (count($array) < 2) return $array;
+    
+    $pivot = $array[0];
+    $left = []; 
+    $right = [];
+    
+    foreach (array_slice($array, 1) as $num) {
+        if ($num < $pivot) {
+            $left[] = $num;
+        } else {
+            $right[] = $num;
+        };
+    };
+
+    return array_merge(quicksort($left),  [$pivot], quicksort($right));
+};
+
+$result = quicksort($array);
+
+print_r($result);
