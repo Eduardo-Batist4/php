@@ -149,7 +149,6 @@ function intArray ($arr) {
 };
 
 intArray([110,12,91,7,31]);
-*/
 
 // --------------------- //
 // Opcional 4
@@ -196,3 +195,4 @@ function kelvin ($temp, $newUnit) {
         echo "Temperatura Kelvin: $temp Para Fahreinheit: {$tempFahreinheitToKelvin}K \n";
     };
 }
+*/
