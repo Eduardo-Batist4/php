@@ -94,15 +94,14 @@ print_r(array_reverse($array));
 // --------------------- //
 
 $vetor1 = [1,2,3,4,5,6,7,8,9,10];
-$vetor2 = [11,12,13,14,15,16,17,18,19,20];
+$vetor2 = [11,12,13,14,15,16,17,18,19];
 
-$input1 = readline("Primeira posição: \n");
-$input2 = readline("Segunda posição: \n");
-
-$result = $vetor1[$input1] * $vetor2[$input2];
-
-echo "Resultado: $result \n";
-
+for ($i = 0; $i <= count($vetor1); $i++) {
+    if(isset($vetor2[$i])) {
+        $result = $vetor1[$i] * $vetor2[$i];
+        echo "Resultado: $result \n";
+    }
+}
 
 // --------------------- //
 // Opcional 7
